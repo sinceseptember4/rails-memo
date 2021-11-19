@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  root 'memos#index'
-  resources :memos
+  namespace 'api' do
+    namespace 'v1' do
+      resources :memos
+    end
+  end
 end
